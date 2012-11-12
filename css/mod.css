@@ -4,6 +4,37 @@
   font-weight: 100;
 }
 
+/* CLEARING THE AIR */
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 100; 
+  letter-spacing: 1px;
+}
+
+a, a:hover, a:visited{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* TEXT FORMATTING */
+.explanation {
+  margin: 80px;
+}
+
+.explanation p { 
+  line-height: 1.4;
+  font-size: 24px;
+  color: #536e79; 
+}
+
+/* JUMBOTRON */
 
 div.jumbotron{
   width: 100%;
@@ -30,6 +61,8 @@ div.jumbotron{
   font-size: 56px;
   line-height: 1.2;
 }
+
+/* RIBBON AND LOGO */
 
 .logo {
   position: absolute;
@@ -69,3 +102,27 @@ div.jumbotron{
     border-right: 50px solid transparent;
     left: -6px;
 }
+
+/* BUTTONS */
+
+.button {
+  text-align: center;
+}
+
+.white .button {
+  background-color: white;
+  color: #4d7c90;
+}
+
+.white .button:hover {
+  background-color: #eee;
+}
+
+.jumbotron .login .button {
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px;
+  margin: 20px auto;
+  font-size: 24px;
+}
+
