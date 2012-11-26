@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>ChoreSwap</title>
-    <!--<link href = "css/bootstrap.min.css" rel = "stylesheet" media = "screen" />-->
+    <link href = "css/bootstrap.min.css" rel = "stylesheet" media = "screen" />
     <link href = "css/mod.css" rel = "stylesheet" media = "screen" />
   </head>
   <body>
@@ -20,12 +20,23 @@
       <div class = "login_forms_wrapper">
         <div class = "signup_form">
           <h3>I'm new here.</h3>
-          <a href = "#" >
-            <div class = "button blue login">Sign Up</div>
-          </a>
+          
+          <form class="form-signin" id="form-signup">
+            <input type="text" class="input-block-level" placeholder="Name" />
+            <input type="text" class="input-block-level" placeholder="Chapter">
+            <input type="text" class="input-block-level" placeholder="Email address">
+            <input type="password" class="input-block-level" placeholder="Password">
+            <button class = "button blue login signup" type = "submit">Sign Up</button>
+          </form>
         </div>
         <div class = "login_form">
           <h3>I already have an account.</h3>
+          <form class="form-signin" if="form-login">
+            <input type="text" class="input-block-level" placeholder="Email address">
+            <input type="password" class="input-block-level" placeholder="Password">
+            <button class = "button blue login signup" type = "submit">Sign In</button>
+          </form>
+        </div>
         </div>
         <div style = "clear:both"></div>
       </div>

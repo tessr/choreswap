@@ -4,8 +4,13 @@
   font-weight: 100;
 }
 
+@font-face{
+  font-family: Cubano;
+  src: url("../fonts/Cubano-Regular.otf");
+}
+
 /* CLEARING THE AIR */
-body{
+body, .button.request{
   margin: 0;
   padding: 0;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -21,6 +26,17 @@ a, a:hover, a:visited{
 .container {
   width: 940px;
   margin: 0 auto;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  box-shadow: inherit;
+  border: inherit;
+  margin: inherit;
+  padding: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
 }
 
 /* TEXT FORMATTING */
@@ -103,18 +119,34 @@ div.jumbotron{
     left: -6px;
 }
 
+/* HEADER FOR NON-SPLASH PAGE */
+.headline{
+    width: 100%;
+    text-align: center;
+    font-family: Cubano, Arial Round, sans-serif;
+    font-size: 28px;
+    padding: 15px;
+    color: white;
+    background-color: #4d7c90;
+    box-shadow: 5px 0 0 #eee,
+                -5px 0 0 #eee;
+    -webkit-filter: drop-shadow(0 2px 5px hsla(0,0%,0%,.5));
+    position: relative ;
+    z-index: -1;
+}
+
 /* BUTTONS */
 
 .button {
   text-align: center;
 }
 
-.white .button {
+.white.button {
   background-color: white;
   color: #4d7c90;
 }
 
-.white .button:hover {
+.white.button:hover {
   background-color: #eee;
 }
 
@@ -124,5 +156,101 @@ div.jumbotron{
   width: 140px;
   margin: 20px auto;
   font-size: 24px;
+}
+
+.blue.button {
+  background-color: #4d7c90;
+  color: white;
+}
+
+.login_forms_wrapper .login.button { 
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  margin: 15px auto;
+  font-size: 20px;
+}
+
+.button.request {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* FORMS */
+
+.form-signin{
+  width: 300px;
+  text-align: center;
+}
+
+.signup_form .input-block-level, .login_form .input-block-level {
+  padding: 24px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+/* LOGIN PAGE SPECIFICS */
+
+.container .login_forms_wrapper{
+  width: 800px;
+  margin: 90px auto;
+}
+
+.container .login_forms_wrapper h3, .container .dashcont h3{
+  font-family: Raleway;
+  font-size: 24px;
+  color: #4d7c90;
+}
+
+.container .signup_form{
+  float: left;
+  border-right: 1px solid #4d7c90;
+  width: 370px;
+}
+
+.container .login_form{
+  float: right;
+  width: 360px;
+  margin-top: 40px;
+}
+
+.container .login_forms_wrapper button.blue {
+  width: 250px;
+  margin: 20px auto;
+}
+
+/* DASHBOARD */
+
+.container .dashcont{
+  width: 800px;
+  margin: 40px auto;
+}
+
+.request_button_container{
+  position: absolute;
+  right: 60px;
+  top: 5px;
+}
+
+/* OVERLAY THINGS */
+#overlay{
+  position: fixed;
+  z-index: 2;
+  background: rgba(0,0,0,.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.popup{
+  width: 600px;
+  background: white;
+  position: absolute;
+  z-index: 3;
+  top: 250px;
 }
 
