@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <title>ChoreSwap</title>
+    <link href = "css/bootstrap.min.css" rel = "stylesheet" media = "screen" />
+    <link href = "css/mod.css" rel = "stylesheet" media = "screen" />
+  </head>
+  <body>
+    <div class = "logo">
+      <div class = "ribbon">
+        <a href = "#">
+          <img src = "img/logo.png" width=80px height=80px />
+        </a>
+      </div>
+    </div>
+    <div class = "headline">
+      CHORESWAP
+
+    </div>
+    <div class = "container">
+      <div class = "dashcont">
+          <div class = "request_button_container overlay_trigger">
+              <a href = "#">
+                <div class = "button blue request">Create Request</div>
+              </a>
+          </div>
+          <h3>Welcome, Tess Rinearson (Alpha Chi Omega, Kappa Nu). </h3>
+          
+      </div>
+    </div>
+    <div id = "overlay">
+      <div class = "popup">
+        <h3>Create a new request</h3>
+            <form class="form-createrequest" >
+              <input type="text" class="input-block-level" placeholder="Time" />
+              <input type="text" class="input-block-level" placeholder="Chore">
+              <button class = "button blue login signup" type = "submit">Submit</button>
+            </form>
+
+      </div>
+    </div>
+
+    <!-- at the end of the doc so that html elements load faster -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type = 'text/javascript'>
+      $(document).ready(function(){
+        $('#overlay').hide();
+        $('.overlay_trigger').click(function(){
+          $('#overlay').show();
+          $('#overlay').click(function(){
+            $('#overlay').hide();
+          });
+        });
+      });
+    
+    </script>
+  </body>
+</html>

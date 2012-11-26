@@ -142,7 +142,7 @@ div.jumbotron{
 }
 
 .white.button {
-  background-color: white;
+  background: white;
   color: #4d7c90;
 }
 
@@ -150,7 +150,7 @@ div.jumbotron{
   background-color: #eee;
 }
 
-.jumbotron .login .button {
+.jumbotron .login.button {
   border-radius: 5px;
   padding: 10px;
   width: 140px;
@@ -176,6 +176,7 @@ div.jumbotron{
   padding: 10px;
   font-size: 18px;
   font-weight: 300;
+  width: 140px;
 }
 
 /* FORMS */
@@ -185,7 +186,7 @@ div.jumbotron{
   text-align: center;
 }
 
-.signup_form .input-block-level, .login_form .input-block-level {
+.input-block-level, .signup_form .input-block-level, .login_form .input-block-level {
   padding: 24px;
   font-size: 20px;
   line-height: 1.4;
@@ -222,6 +223,12 @@ div.jumbotron{
   margin: 20px auto;
 }
 
+.popup button.blue {
+  width: 150px;
+  border-radius: 5px;
+  padding: 5px 10px;
+ }
+
 /* DASHBOARD */
 
 .container .dashcont{
@@ -230,9 +237,7 @@ div.jumbotron{
 }
 
 .request_button_container{
-  position: absolute;
-  right: 60px;
-  top: 5px;
+  float: right;
 }
 
 /* OVERLAY THINGS */
@@ -249,8 +254,8 @@ div.jumbotron{
 .popup{
   width: 600px;
   background: white;
-  position: absolute;
-  z-index: 3;
-  top: 250px;
+  margin: 200px auto;
+  padding:150px;
+  
 }
 
