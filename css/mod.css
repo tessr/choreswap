@@ -254,8 +254,11 @@ div.jumbotron{
 .popup{
   width: 600px;
   background: white;
-  margin: 200px auto;
-  padding:150px;
-  
+  padding:50px;
+  position: fixed;
+  z-index: 3;
+  top: 40px;
+  left: 50%;
+  margin-left: -350px;
 }
 

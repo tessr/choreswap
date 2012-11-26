@@ -29,15 +29,15 @@
       </div>
     </div>
     <div id = "overlay">
-      <div class = "popup">
-        <h3>Create a new request</h3>
-            <form class="form-createrequest" >
-              <input type="text" class="input-block-level" placeholder="Time" />
-              <input type="text" class="input-block-level" placeholder="Chore">
-              <button class = "button blue login signup" type = "submit">Submit</button>
-            </form>
-
-      </div>
+    </div>
+    <div class = "popup">
+      <h3>Create a new request</h3>
+          <form class="form-createrequest" >
+            <input type="text" class="input-block-level" placeholder="Time" />
+            <input type="text" class="input-block-level" placeholder="Chore">
+            <input type="text" class="input-block-level" placeholder="Anyone in particular you want to notify about this?">
+            <button class = "button blue login signup" type = "submit">Submit</button>
+          </form>
     </div>
 
     <!-- at the end of the doc so that html elements load faster -->
@@ -46,10 +46,13 @@
     <script type = 'text/javascript'>
       $(document).ready(function(){
         $('#overlay').hide();
+        $('.popup').hide();
         $('.overlay_trigger').click(function(){
           $('#overlay').show();
+          $('.popup').show();
           $('#overlay').click(function(){
             $('#overlay').hide();
+            $('.popup').hide();
           });
         });
       });
