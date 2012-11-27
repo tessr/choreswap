@@ -159,9 +159,13 @@ div.jumbotron{
 }
 
 .blue.button {
-  background-color: #4d7c90;
+  background-color: #4b6f99;
   color: white;
 }
+
+.blue.button:hover {
+  background-color: #395474;
+ }
 
 .login_forms_wrapper .login.button { 
   border-radius: 5px;
@@ -262,3 +266,23 @@ div.jumbotron{
   margin-left: -350px;
 }
 
+/* REQUEST LOG INFO & STYLING */
+
+.request_log{
+  border-top: 1px dotted #333333;
+  font-weight: 300;
+  font-size: 16px;
+  font-style: italic;
+  color: #666;
+  padding-bottom: 60px;
+}
+
+.request_log li{
+  list-style-type: none;
+}
+
+.request_log .requestee, .request_log .chore_time, .request_log .chore_description{
+  font-style: normal;
+  font-weight: 500;
+  color: #4d7c90;
+}

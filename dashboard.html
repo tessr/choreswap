@@ -26,11 +26,33 @@
           </div>
           <h3>Welcome, Tess Rinearson (Alpha Chi Omega, Kappa Nu). </h3>
           
+        <section class = "request_log yours">
+          <h3>Your Requests</h3>
+          <li class = "request_item">
+            <a href = "#">
+              <span class = "requestee">Faith Clayton</span> asks if you can do her <span class = "chore_time">7:30 PM</span> chore: <span class = "chore_description">Clean and rinse trays</span>.
+            </a>
+          </li>
+        </section>
+
+        <section class = "request_log all">
+          <h3>All Requests</h3>
+          <li class = "request_item">
+            <a href = "#">
+              <span class = "requestee">Faith Clayton</span> needs someone to do her <span class = "chore_time">7:30 PM</span> chore: <span class = "chore_description">Clean and rinse trays</span>.
+            </a>
+          </li>
+        </section>
+      
+        <section class = "request_log balance">
+          <h3>Balance</h3>
+          You need to do 2 more chores this semester to break even.
+        </section>
       </div>
     </div>
     <div id = "overlay">
     </div>
-    <div class = "popup">
+    <div class = "popup request_new">
       <h3>Create a new request</h3>
           <form class="form-createrequest" >
             <input type="text" class="input-block-level" placeholder="Time" />
@@ -38,6 +60,15 @@
             <input type="text" class="input-block-level" placeholder="Anyone in particular you want to notify about this?">
             <button class = "button blue login signup" type = "submit">Submit</button>
           </form>
+    </div>
+
+    <div class = "popup request_details">
+      <a href = "#">
+        <div class = "button blue request" style = "float: left;">Accept</div>
+      </a>
+      <a href = "#">
+        <div class = "button blue request ignore_button" style = "float: left; margin-left: 20px">Ignore</div>
+      </a>
     </div>
 
     <!-- at the end of the doc so that html elements load faster -->
@@ -49,7 +80,15 @@
         $('.popup').hide();
         $('.overlay_trigger').click(function(){
           $('#overlay').show();
-          $('.popup').show();
+          $('.request_new').show();
+          $('#overlay').click(function(){
+            $('#overlay').hide();
+            $('.popup').hide();
+          });
+        });
+        $('.request_item').click(function(){
+          $('#overlay').show();
+          $('.request_details').show();
           $('#overlay').click(function(){
             $('#overlay').hide();
             $('.popup').hide();
